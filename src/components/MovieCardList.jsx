@@ -1,4 +1,5 @@
 import MovieCard from "./MovieCard";
+import PropTypes from "prop-types";
 
 function MovieCardList(props) {
   return (
@@ -13,6 +14,16 @@ function MovieCardList(props) {
       ))}
     </div>
   );
+}
+
+MovieCardList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      poster: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  )
 }
 
 export default MovieCardList
