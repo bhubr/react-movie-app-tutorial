@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import MovieCard from "./components/MovieCard";
+import MovieCardList from "./components/MovieCardList";
 
 const moviesArr = [
   {
@@ -23,28 +23,10 @@ const moviesArr = [
   }
 ];
 
-const numbers = [1, 2, 3, 4, 5];
-
 function App() {
   return <div className="App container">
-    <ul>
-      {
-        numbers.map((number) =>
-          <li key={number}>{number}</li>
-        )
-      }
-    </ul>
     <Header title="Ma bibliothèque de films" />
-    {
-      moviesArr.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          title={movie.title}
-          poster={movie.poster}
-          description={movie.description}
-        />
-      ))
-    }
+    <MovieCardList movies={moviesArr} />
   </div>;
 }
 
