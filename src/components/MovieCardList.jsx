@@ -1,5 +1,6 @@
 import MovieCard from "./MovieCard";
 import PropTypes from "prop-types";
+import "./MovieCardList.css";
 
 function MovieCardList(props) {
   return (
